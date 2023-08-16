@@ -23,9 +23,10 @@ public class ImpUserService implements IUserService{
     public boolean validateCredentials(String username, String password) {
         User user = userRepository.findByUsername(username);
         if(user!= null){
-            System.out.println("Approved credentials");
+            System.out.println("Registered user");
             return true;
         }
+        System.out.println("Unregistered user");
         return false;
 
     }

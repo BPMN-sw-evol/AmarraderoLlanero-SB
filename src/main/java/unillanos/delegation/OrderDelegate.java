@@ -21,7 +21,6 @@ public class OrderDelegate implements JavaDelegate {
         System.out.println("currentActivityId: " + currentActivityId);
         switch (currentActivityId){
             case "createOrderServiceTask" -> {
-                System.out.println("funciona!!!!");
                 OrderDTO orderDTO = new OrderDTO();
                 orderDTO.setPedidoAsadero(execution.getProcessInstance().getVariables().get("pedidoAsadero").toString());
                 orderDTO.setCantPedidoAsadero(Integer.parseInt(execution.getProcessInstance().getVariables().get("cantPedidoAsadero").toString()));
@@ -31,7 +30,6 @@ public class OrderDelegate implements JavaDelegate {
                 orderDTO.setCantPedidoBar(Integer.parseInt(execution.getProcessInstance().getVariables().get("cantPedidoBar").toString()));
                 orderDTO.setFechaActual(new Date());
                 orderService.save(orderDTO);
-
             }
         }
     }
