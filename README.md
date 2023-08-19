@@ -51,7 +51,7 @@ Before running the program, make sure of the following **(the easiest is with AW
 
 6. **PgAdmin**: [official website](https://www.postgresql.org/download/) to install PostgreSQL and pgAdmin for the database manage.
 
-7. Create a database called amarraderollanero with the help of pgAdmin and modify in src/main/resources/application.properties the following: 
+7. Create a database called amarraderollanero with the tables Users and Orders with the help of pgAdmin and modify in src/main/resources/application.properties the following:
 
     ````configuration
     spring.datasource.url=jdbc:postgresql://localhost/amarraderollanero
@@ -59,11 +59,11 @@ Before running the program, make sure of the following **(the easiest is with AW
     spring.datasource.password=your_password
     ````
 
-8. **Clone the repository**: Use the following command to clone the repository: `git clone https://github.com/BPMN-sw-evol/AmarraderoLlanero-SB`.
+8. **Clone the repository**: Use the following command to clone the repository: `git clone https://github.com/BPMN-sw-evol/AmarraderoLlanero-SB`
 
-9. Inside the previously cloned repository, in a terminal run the following command to create the image from the Dockerfile: `docker build -t amarraderolocal .`.
+9. Inside the previously cloned repository, in a terminal run the following command to create the image from the Dockerfile: `docker build -t amarraderolocal .`
 
-10. Now run the following command to run the docker container: `docker run -p 8080:8080 amarraderolocal`.
+10. Now run the following command to run the docker container: `docker run -p 8080:8080 amarraderolocal`
 
 11. Ready! Use the program.
 
@@ -75,23 +75,21 @@ Before running the program, make sure of the following **(the easiest is with AW
 
 2. Log in to the AWS Management Console using your credentials.: [official website](https://aws.amazon.com/marketplace/management/signin) (if you are already registered, skip this step.).
 
-3. Navigate to the Services section or use the search bar to find the EC2 (Elastic Compute Cloud - Virtual Cloud Servers) service and create an EC2 service with its respective configuration.
+3. Virtual machine and instance database creation [creation guide](https://docs.google.com/document/d/1DGI8_nkBq9eD0TAqSlSBcFuYAjRvll_k/edit#heading=h.e10giwd1tsyw)
 
-4. Now do the same as in the previous step, but to create the database instance in the RDS service. 
+4. When the instance database is running, you must connect to EC2 [connection guide](https://docs.google.com/document/d/1DGI8_nkBq9eD0TAqSlSBcFuYAjRvll_k/edit#heading=h.z8hzk2vh096y)
 
-5. On EC2 update the system with the package manager. 
+5. Make the update and Initial Configuration [update and configuration guide](https://docs.google.com/document/d/1DGI8_nkBq9eD0TAqSlSBcFuYAjRvll_k/edit#heading=h.55zhux44rzwd)
 
-6. Install GIT on EC2
+6. Configure the project Amarradero Llanero [Amarradero Llanero configuration guide](https://docs.google.com/document/d/1DGI8_nkBq9eD0TAqSlSBcFuYAjRvll_k/edit#heading=h.z7qzjimlcuv6)
 
-7. Install Docker on EC2
+7. Execute the project [execution guide](https://docs.google.com/document/d/1DGI8_nkBq9eD0TAqSlSBcFuYAjRvll_k/edit#heading=h.k21b1ys9cb1d)
 
-7. Clone this repository on EC2 with `git clone https://github.com/BPMN-sw-evol/AmarraderoLlanero-SB` 
-
-9. Inside the previously cloned repository run the following command to create the image from the Dockerfile: `docker build -t amarraderoaws .`.
-
-10. Now run the following command to run the docker container: `docker run -p 8080:8080 amarraderoaws`.
-
-11. Ready! Use the program.
+8. Ready! Use the program.
 
 ## Funcionality
+
+For the case of AWS deployment, you must use the virtual marchine IP adress with the port 8080 to start de program. Example: if you virtual machine IP is 18.221.143.237 you must open in your browser it:
+
+    18.221.143.237:8080
 
